@@ -77,11 +77,13 @@ const parser = function(text) {
 
   console.log(`${alltokens}`);
   Object.keys(allConversions).forEach((unitName) => {
-    console.log(`= ${allConversions[unitName]} ${unitName}`)
+    console.log(`  = ${allConversions[unitName]} ${unitName}`)
   });
   console.log();
 };
 
 console.log("-------------------")
-parser("mass 15 st 6.4 lbs");
-parser("length 150 cm");
+parser("mass 17 st 3 lbs");
+parser("area 14 acre");
+parser("length 6 ft 4 in");
+parser("time 28 day 6 hr 42 min 12 s");
