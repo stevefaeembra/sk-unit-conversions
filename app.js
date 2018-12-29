@@ -19,6 +19,12 @@ const conversions = {
     km2 : 1000000.0,
     mi2 : 2589988.110336,
     sqft : .09290304, // square foot
+  },
+  mass: {
+    st: 6.350293,
+    kg: 1.0,
+    lbs: 0.4535923,
+    g: 0.001,
   }
 }
 
@@ -47,8 +53,13 @@ const convert = function(type, quantities) {
   return result;
 };
 
+// some examples
+
 let c = convert("length",[[1.0,"ft"], [3.0,"in"]]);
 console.log(c);
 
-c= convert("area",[[22.0,"acre"]]);
+c = convert("area",[[22.0,"acre"]]);
+console.log(c);
+
+c = convert("mass",[[17.0,"st"],[3.5,"lbs"]])
 console.log(c);
