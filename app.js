@@ -11,6 +11,14 @@ const conversions = {
     in: 0.0254,
     cm: 0.01,
     mm: 0.001
+  },
+  area: {
+    m2 : 1.0,
+    ha: 10000.0, // hectare
+    acre: 4046.8564224,
+    km2 : 1000000.0,
+    mi2 : 2589988.110336,
+    sqft : .09290304, // square foot
   }
 }
 
@@ -40,4 +48,7 @@ const convert = function(type, quantities) {
 };
 
 let c = convert("length",[[1.0,"ft"], [3.0,"in"]]);
+console.log(c);
+
+c= convert("area",[[22.0,"acre"]]);
 console.log(c);
