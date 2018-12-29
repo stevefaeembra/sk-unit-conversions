@@ -21,22 +21,23 @@ const convert = function(type, quantities) {
   // [[3,"hours"],[12,"mins"],[3,"secs"]]
   const conversionTable = conversions[type];
   const result = {};
+  let accumulator = 0;
   quantities.forEach((token) => {
-    console.log(token);
     const quantity = token[0];
     const units = token[1];
     const multiplier = conversionTable[units];
     const amount = multiplier * quantity;
-    console.log(amount);
-    Object.keys(conversionTable).forEach((unitName) => {
-      const unit = unitName;
-      const conversion = conversionTable[unit];
-      const amount2 = amount / conversion;
-      result[unit] = amount2;
-    })
+    accumulator += amount;
+    console.log(`units: ${token}  ac:${accumulator}`);
+  });
+  Object.keys(conversionTable).forEach((unitName) => {
+    const unit = unitName;
+    const conversion = conversionTable[unit];
+    const amount2 = accumulator / conversion;
+    result[unit] = amount2;
   });
   return result;
 };
 
-let c = convert("length",[[1.0,"ft"]]);
+let c = convert("length",[[1.0,"ft"], [3.0,"in"]]);
 console.log(c);
