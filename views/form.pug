@@ -6,10 +6,11 @@ html(lang='en')
         link(href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet") 
     body  
       h1
-        | Steve's Yoonit Converter
+        | Steve's Unit Converter
+      hr
       p
         | Examples
-      ol
+      ul
         li 
           | 16 st 7 lbs
         li 
@@ -17,9 +18,11 @@ html(lang='en')
         li 
           | 32.5 km2
         li
-          | Make sure you put a space between the amount and the units!
+          | 2 hr 3 min
+      hr
+      p
+        | Make sure you put a space between the amount and the units!
+      p
       form(method="get" action="/convert")
-        label(for="q")
-          | Query ?
         input(id="q" name="q" type="text" placeholder="6 ft 4 in")
         input(type="submit" value="convert!" name="convert!")
