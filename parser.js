@@ -1,4 +1,5 @@
 const convert = require('./conversions.js');
+const types = require('./types');
 
 // parser
 // takes string like
