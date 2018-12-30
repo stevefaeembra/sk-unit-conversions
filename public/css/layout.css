@@ -59,3 +59,8 @@ label {
 hr {
   margin: 1rem 0;
 }
+
+input[type="submit"] {
+  padding: .3rem;
+  border-radius: 1rem;
+}
