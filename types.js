@@ -1,3 +1,6 @@
+// this maps unit names onto their categories
+// (mass, weight, length etc.)
+
 const types = {
 
   mi: "length",
