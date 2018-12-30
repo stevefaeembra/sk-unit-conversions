@@ -10,7 +10,7 @@ html(lang='en')
       form(method="get" action="/convert")
         label(for="q")
           | Query 
-        input(id="q" name="q" type="text" placeholder="length 6 ft 4 in")
+        input(id="q" name="q" type="text" placeholder="6 ft 4 in")
         input(type="submit" value="convert!" name="convert!")
       table 
         - for (var item of Object.keys(data.conversions) ) {
