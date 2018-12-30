@@ -14,20 +14,24 @@ const conversions = {
   },
   area: {
     // base unit is m2
-    m2 : 1.0,
-    ha: 10000.0, // hectare
+    mi2 : 2589988.110336,
+    km2 : 1000000.0,
+    ha:   10000.0, // hectare
     footballpitch: 7140,
     acre: 4046.8564224,
-    km2 : 1000000.0,
-    mi2 : 2589988.110336,
+    perch: 25.29285264,
+    m2 : 1.0,
     sqft : .09290304, // square foot
   },
   mass: {
     // base unit is kg
-    st: 6.350293,
+    st: 6.35029318,
     kg: 1.0,
     lbs: 0.4535923,
     g: 0.001,
+    cwt: 50.80234544,
+    tonne: 1016.0469088,
+
   },
   time: {
     // base unit is secs (s)
@@ -38,6 +42,16 @@ const conversions = {
     day: 86400.0,
     year: 365.0*86400.0,
     donniedarko: 2443332,
+  },
+  volume: {
+    // fluid volumes. Standard is ml
+    l : 1000.0,
+    ml: 1.0,
+    floz: 28.4130625,
+    gill: 142.0653125,
+    pint: 568.26125,
+    quart: 1136.5225,
+    gallon: 4546.09,
   }
 };
 
