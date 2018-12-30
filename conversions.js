@@ -1,3 +1,54 @@
+// These are UK units for now.
+// US units may differ (except for time)
+
+const types = {
+
+  mi: "length",
+  km: "length",
+  fur: "length",
+  dm: "length",
+  ftm: "length",
+  m: "length",
+  ft: "length",
+  in: "length",
+  cm: "length",
+  mm: "length",
+
+  mi2 : "area",
+  km2 : "area",
+  ha: "area",
+  footballpitch: "area",
+  acre: "area",
+  perch: "area",
+  m2 : "area",
+  sqft : "area",
+
+  st: "mass",
+  kg: "mass",
+  lbs: "mass",
+  g: "mass",
+  cwt: "mass",
+  tonne: "mass",
+
+  ms: "time",
+  s: "time",
+  min: "time",
+  hr: "time",
+  day: "time",
+  year: "time",
+  donniedarko: "time",
+
+  l : "volume",
+  ml: "volume",
+  floz: "volume",
+  gill: "volume",
+  pint: "volume",
+  quart: "volume",
+  gallon: "volume",
+
+};
+
+
 const conversions = {
   length: {
     // base unit is m
@@ -10,7 +61,7 @@ const conversions = {
     ft: 0.3048,
     in: 0.0254,
     cm: 0.01,
-    mm: 0.001
+    mm: 0.001,
   },
   area: {
     // base unit is m2
@@ -31,7 +82,6 @@ const conversions = {
     g: 0.001,
     cwt: 50.80234544,
     tonne: 1016.0469088,
-
   },
   time: {
     // base unit is secs (s)

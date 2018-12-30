@@ -7,8 +7,8 @@ html(lang='en')
     body  
       h1
         | Steve's Unit Converter
-        form(method="get" action="/convert")
-          label(for="q")
-            | Query 
-          input(id="q" name="q" type="text" placeholder="length 6 ft 4 in")
-          input(type="submit" value="convert!" name="convert!")
+      form(method="get" action="/convert")
+        label(for="q")
+          | Query 
+        input(id="q" name="q" type="text" placeholder="length 6 ft 4 in")
+        input(type="submit" value="convert!" name="convert!")
