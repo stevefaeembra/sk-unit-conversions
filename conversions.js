@@ -25,7 +25,7 @@ const conversions = {
   mass: {
     // base unit is kg
     st: 6.350293,
-    kg: 1.0, // base unit
+    kg: 1.0,
     lbs: 0.4535923,
     g: 0.001,
   },

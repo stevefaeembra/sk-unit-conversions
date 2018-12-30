@@ -85,5 +85,5 @@ const parser = function(text) {
 console.log("-------------------")
 parser("mass 17 st 3 lbs");
 parser("area 14 acre");
-parser("length 6 ft 4 in");
+parser("length 5 ft 5 in");
 parser("time 28 day 6 hr 42 min 12 s");

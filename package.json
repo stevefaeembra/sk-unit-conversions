@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "big.js": "^5.2.2"
+    "big.js": "^5.2.2",
+    "express": "^4.16.4",
+    "pug": "^2.0.3"
   }
 }
