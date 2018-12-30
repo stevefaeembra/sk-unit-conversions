@@ -6,10 +6,33 @@
 
 html {
   font-size: 16px;
-  background-color: wheat;
+  background-color: white;
   font-family: 'Raleway';
+}
+
+body {
+  width: 200px;
+  margin: 0 auto;
 }
 
 label {
   font-size: 1rem;
+}
+
+input {
+  font-weight: bolder;
+  font-size: 1.3rem;
+}
+
+table {
+  margin-top: 1rem;
+}
+
+td {
+  background-color: whiteSmoke;
+  padding: .5rem;
+}
+
+::placeholder {
+  color: rgba(255,0,0,.3);
 }
