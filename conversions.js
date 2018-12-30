@@ -41,4 +41,42 @@ const conversions = {
   }
 };
 
-module.exports = conversions;
+const convert = function(type, quantities) {
+
+  // type should be a key in the conversions object
+  // e.g. "weight", "mass", "length"
+
+  // quantities should be an array
+  // each element is an array of [quanity, unitName]
+  // e.g. [[34.0,"acre"]]
+  // e.g. [[16,"stone"],[7,"lbs"]]
+  // if more than one element, their values are added together before conversion
+
+  const conversionTable = conversions[type];
+  const result = {};
+  let accumulator = 0;
+
+  // acummulate values
+
+  quantities.forEach((token) => {
+    const quantity = token[0];
+    const units = token[1];
+    const multiplier = conversionTable[units];
+    const amount = multiplier * quantity;
+    accumulator += amount;
+    //console.log(`units: ${token}  ac:${accumulator}`);
+  });
+
+  // convert to each unit in the same category
+
+  Object.keys(conversionTable).forEach((unitName) => {
+    const unit = unitName;
+    const conversion = conversionTable[unit];
+    const amount2 = accumulator / conversion;
+    result[unit] = amount2;
+  });
+
+  return result;
+};
+
+module.exports = convert;
