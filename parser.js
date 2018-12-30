@@ -15,7 +15,7 @@ const parser = function(text) {
   let stack = [];
   let elements = [];
   let alltokens = "";
-  const type = items.shift(); // get first token as type
+  let type = ""; // we'll look this up using types.js
   // now parse rest. treat as pairs (amount, then unit name)
   items.forEach((token) => {
     let val;
@@ -25,6 +25,11 @@ const parser = function(text) {
     } else {
       // should be unit name
       val = token;
+      // try to work out unit type (weight, volume, length etc.) from this
+      if (type==="") {
+        type = types[val];
+        console.log(`First unit encountered (${val}) is of type ${type}`)
+      }
     }
     stack.push(val);
     alltokens += `${val} `;
