@@ -28,7 +28,6 @@ const parser = function(text) {
       // try to work out unit type (weight, volume, length etc.) from this
       if (type==="") {
         type = types[val];
-        console.log(`First unit encountered (${val}) is of type ${type}`)
       }
     }
     stack.push(val);
@@ -43,8 +42,6 @@ const parser = function(text) {
   // now have an array suitable for passing to the converter.
   let elementsCopy = elements.slice(0);
   let allConversions = convert(type, elements);
-
-  console.log(`${elementsCopy}`);
 
   return {
     input: elementsCopy,

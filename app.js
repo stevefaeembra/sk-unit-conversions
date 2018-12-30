@@ -15,7 +15,10 @@ app.get("/", (req,res) => {
 });
 
 app.get("/convert", (req,res) => {
-  res.json(parser(req.query.q));
+  //res.json(parser(req.query.q));
+  var resulty = parser(req.query.q);
+  console.log(resulty);
+  res.render("results", {data: parser(req.query.q)});
 });
 
 app.listen(port, function () {
