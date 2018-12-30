@@ -14,9 +14,9 @@ app.get("/", (req,res) => {
   res.render('form',{});
 });
 
-// app.get("/", (req,res) => {
-//   res.json(parser(req.query.q));
-// });
+app.get("/convert", (req,res) => {
+  res.json(parser(req.query.q));
+});
 
 app.listen(port, function () {
   console.log(`Started server on port ${port}`);

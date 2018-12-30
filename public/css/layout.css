@@ -9,3 +9,7 @@ html {
   background-color: wheat;
   font-family: 'Raleway';
 }
+
+label {
+  font-size: 1rem;
+}
